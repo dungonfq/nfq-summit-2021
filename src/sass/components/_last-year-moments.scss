@@ -75,6 +75,7 @@
             .video {
                 &-item {
                     iframe {
+                        height: 500px;
                         border-radius: 20px;
                     }
                 }

@@ -3,11 +3,19 @@ body {
     margin: 0;
 }
 
+footer#layout-footer {
+    min-height: 190px;
+    line-height: 29px;
+    padding-top: 35px;
+    background: $color-white;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 .container {
+    width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -50,7 +58,7 @@ body {
     }
 
     &__headline {
-        font-size: 2.25rem;
+        font-size: 1.5rem;
         text-transform: capitalize;
         font-weight: bold;
         font-family: $font-family-medium;
@@ -64,6 +72,10 @@ body {
     @include r($md-tablet) {
         &__header {
             margin-bottom: 50px;
+        }
+
+        &__headline {
+            font-size: 2.25rem;
         }
     }
 }
