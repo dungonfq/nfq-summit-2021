@@ -1,16 +1,12 @@
 .summit-points {
-    margin-top: 50px;
-    margin-bottom: 35px;
-
-    &__header {
-        margin-bottom: 35px;
-    }
+    padding-top: 50px;
+    padding-bottom: 35px;
 
     &__main {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
     }
 
     &__item.item {
@@ -35,25 +31,26 @@
                 color: $color-grey-c4;
                 line-height: 1;
                 font-weight: bold;
-                font-family: $font-family-medium;
+                font-family: $font-family-extra-black;
             }
 
             &__title {
                 font-weight: bold;
                 font-size: 18px;
-                font-family: $font-family-extra-black;
+                font-family: $font-family-medium;
             }
 
             &__desc {
                 padding-right: 25px;
-                margin-top: 10px;
+                margin-top: 5px;
+                font-size: 18px;
             }
         }
     }
 
     @include r($md-tablet) {
-        margin-top: 100px;
-        margin-bottom: 85px;
+        padding-top: 100px;
+        padding-bottom: 85px;
 
         &__item.item {
             flex-basis: 50%;
