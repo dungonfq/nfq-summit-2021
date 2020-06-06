@@ -1,15 +1,18 @@
 /* eslint-disable */
 <template>
     <div class="home">
-        <TopBackground />
+        <TopBg />
+        <SummitPoints />
     </div>
 </template>
 
 <script>
-import TopBackground from "@/components/Home/TopBackground";
+import TopBg from "@/components/Home/TopBg";
+import SummitPoints from "@/components/Home/SummitPoints";
 export default {
     components: {
-        TopBackground
+        TopBg,
+        SummitPoints
     }
 }
 </script>

@@ -1,0 +1,41 @@
+body {
+    font-family: $font-family-regular;
+    margin: 0;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include r($sm-tablet) {
+        max-width: 540px;
+    }
+
+    @include r($md-tablet) {
+        max-width: 720px;
+    }
+
+    @include r($lg-tablet) {
+        max-width: 960px;
+    }
+
+    @include r($md-desktop) {
+        max-width: $sm-desktop;
+    }
+}
+
+
+.summit {
+    &__headline {
+        font-size: 2.25rem;
+        text-transform: capitalize;
+        font-weight: bold;
+    }
+
+    &__desc {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+}

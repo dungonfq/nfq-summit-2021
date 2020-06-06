@@ -1,0 +1,76 @@
+.summit-points {
+    margin-top: 50px;
+    margin-bottom: 35px;
+
+    &__header {
+        margin-bottom: 35px;
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item.item {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-bottom: 15px;
+
+        .item {
+            &__header {
+                padding-right: 10px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            &__id {
+                margin-right: 15px;
+                font-size: 4rem;
+                color: $color-grey-c4;
+                line-height: 1;
+                font-weight: bold;
+            }
+
+            &__title {
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            &__desc {
+                padding-right: 25px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    @include r($md-tablet) {
+        margin-top: 100px;
+        margin-bottom: 85px;
+
+        &__item.item {
+            flex-basis: 50%;
+            .item {
+                &__id {
+                    font-size: 5.625rem;
+                }
+
+                &__title {
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    @include r($lg-tablet) {
+        &__item.item {
+            flex-basis: 33.3%;
+        }
+    }
+}
