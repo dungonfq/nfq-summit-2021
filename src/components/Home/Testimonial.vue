@@ -10,7 +10,7 @@
           saying!
         </div>
         <div class="testimonial__icon-quote">
-          <img :src="`${AWS_URL}icons/icon-quote.svg`" />
+          <img src="images/icons/icon-quote.svg" />
         </div>
       </div>
       <div class="testimonial__main row">
@@ -44,12 +44,10 @@
 </template>
 
 <script>
-import { AWS_URL } from "@/data/s3";
 import slidesData from "@/data/slide";
 export default {
   data: () => ({
-    slidesData: slidesData,
-    AWS_URL: AWS_URL
+    slidesData: slidesData
   })
 };
 </script>

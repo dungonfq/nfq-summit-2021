@@ -17,12 +17,12 @@
         <div class="email-subscribe__form">
           <img
             class="email-subscribe__icon-email"
-            :src="`${AWS_URL}icons/icon-email.svg`"
+            src="images/icons/icon-email.svg"
           />
           <img
             v-if="isLoading"
             class="email-subscribe__icon-loading"
-            :src="`${AWS_URL}icons/icon-loading.svg`"
+            src="images/icons/icon-loading.svg"
           />
           <input
             type="email"
@@ -57,13 +57,12 @@
 
     <img
       class="email-subscribe__illustration"
-      :src="`${AWS_URL}illustration/bridge.svg`"
+      src="images/illustration/bridge.svg"
     />
   </div>
 </template>
 
 <script>
-import { AWS_URL } from "@/data/s3";
 import { GS_APP_URL } from "@/data/gs";
 export default {
   data: () => ({
@@ -73,8 +72,7 @@ export default {
     isEmpty: false,
     isSuccess: false,
     isError: false,
-    isLoading: false,
-    AWS_URL: AWS_URL
+    isLoading: false
   }),
   computed: {
     isShowNoti() {

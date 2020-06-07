@@ -11,7 +11,7 @@
       </div>
       <div class="last-year-moments__main row">
         <div class="photos-item photos--left col">
-          <img :src="`${AWS_URL}gallery/photo_00.png`" />
+          <img src="images/gallery/photo_00.png" />
         </div>
 
         <div class="photos--right col">
@@ -21,7 +21,7 @@
               :key="`photos_${photoId}`"
               class="photos-item col"
             >
-              <img :src="`${AWS_URL}gallery/photo_0${photoId}.png`" />
+              <img :src="`images/gallery/photo_0${photoId}.png`" />
             </div>
           </div>
         </div>
@@ -40,12 +40,3 @@
     </div>
   </div>
 </template>
-
-<script>
-import { AWS_URL } from "@/data/s3";
-export default {
-  data: () => ({
-    AWS_URL: AWS_URL
-  })
-}
-</script>

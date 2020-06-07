@@ -1,7 +1,7 @@
 /* eslint-disable */
 <template>
   <div class="home">
-    <img class="logo" :src="`${AWS_URL}logo.png`" />
+    <img class="logo" src="images/logo.png" />
     <TopBg />
     <SummitPoints />
     <LastYearMoments />
@@ -11,7 +11,6 @@
 </template>
 
 <script>
-import { AWS_URL } from "@/data/s3";
 import TopBg from "@/components/Home/TopBg";
 import SummitPoints from "@/components/Home/SummitPoints";
 import LastYearMoments from "@/components/Home/LastYearMoments";
@@ -24,9 +23,6 @@ export default {
     LastYearMoments,
     Testimonial,
     EmailSubscribe
-  },
-  data: () => ({
-    AWS_URL: AWS_URL
-  })
+  }
 };
 </script>
