@@ -15,10 +15,14 @@
             <div class="email-subscribe__main">
                 <div class="email-subscribe__form">
                     <img class="email-subscribe__icon-email" src="/images/icons/icon-email.svg" />
+                    <img v-if="isLoading" class="email-subscribe__icon-loading" src="/images/icons/icon-loading.svg" />
                     <input type="email" class="email-subscribe__input" placeholder="Enter Your Email Address..."
                         v-model="email" name="email"/>
+                    <span v-if="isEmpty" class="text--error">Your email cannot be empty</span>
+                    <span v-if="isError" class="text--error">Your email is invalid</span>
+                    <span v-if="isSuccess" class="text--success">Subscribed email successfully!</span>
                 </div>
-                <button class="email-subscribe__btn">Subscribe</button>
+                <button :class="['email-subscribe__btn', isShowNoti && 'showing-noti']" :disabled="isLoading" @click="submit">Subscribe</button>
             </div>
         </div>
 
@@ -30,7 +34,43 @@
 export default {
     data: () => ({
         email: '',
-        emailPattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/ //[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$
-    })
+        emailPattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/, //[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$
+        isError: false,
+        isEmpty: false,
+        isSuccess: false,
+        isLoading: false,
+    }),
+    computed: {
+        isShowNoti() {
+            return window.innerWidth <= 768 && (this.isError || this.isEmpty || this.isSuccess);
+        }
+    },
+    methods: {
+        submit() {
+            this.reset();
+            const windowWidth = window.innerWidth;
+            this.isLoading = true;
+
+            if(!this.email) {
+                this.isEmpty = true;
+                this.isLoading = false;
+            } else if(!this.emailPattern.test(this.email)) {
+                this.isError = true;
+                this.isLoading = false;
+            } else {
+                this.isSuccess = true;
+                this.isLoading = false;
+                setTimeout(() => {
+                    this.reset();
+                }, 5000)
+            }
+        },
+        reset() {
+            this.isLoading = false;
+            this.isError = false;
+            this.isEmpty = false;
+            this.isSuccess = false;
+        }
+    }
 }
 </script>

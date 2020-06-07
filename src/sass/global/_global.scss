@@ -119,4 +119,36 @@ footer#layout-footer {
     &--center {
         text-align: center;
     }
+
+    &--error,
+    &--success {
+        font-size: 18px;
+        position: absolute;
+        display: block;
+        color: $color-white;
+        border-radius: 5px;
+        padding: 20px;
+        animation-name: text-noti-show;
+        animation-duration: 300ms;
+        animation-timing-function: ease-in;
+    }
+
+    &--error {
+        background-color: $color-red-error;
+    }
+
+    &--success {
+        background-color: $color-green-success;
+    }
+}
+
+@keyframes text-noti-show {
+    from { 
+        bottom: -65px;
+        opacity: 0;
+    }
+    to { 
+        bottom: -75px;
+        opacity: 1;
+    }
 }
