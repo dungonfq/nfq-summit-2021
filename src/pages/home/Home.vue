@@ -1,6 +1,7 @@
 /* eslint-disable */
 <template>
     <div class="home">
+        <img class="logo" src="images/logo.png" />
         <TopBg />
         <SummitPoints />
         <LastYearMoments />
