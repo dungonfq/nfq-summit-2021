@@ -1,7 +1,4 @@
 .last-year-moments {
-    padding-top: 50px;
-    padding-bottom: 35px;
-
     &--bg-orange {
         background-color: $color-orange;
     }
@@ -44,8 +41,6 @@
     }
 
     @include r($md-tablet) {
-        padding-top: 100px;
-        padding-bottom: 85px;
         &__main {
             .photos {
                 &--left,

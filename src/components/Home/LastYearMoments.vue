@@ -1,6 +1,6 @@
 <template>
     <div class="last-year-moments--bg-orange">
-        <div class="last-year-moments container">
+        <div class="last-year-moments container container--p-y">
             <div class="summit__header">
                 <div class="summit__headline">
                     Last Year's Unforgettable Moments

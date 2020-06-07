@@ -1,5 +1,5 @@
 <template>
-    <div class="summit-points">
+    <div class="summit-points container--p-y">
         <div class="container">
             <div class="summit__header">
                 <div class="summit__headline">

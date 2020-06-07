@@ -21,12 +21,22 @@ footer#layout-footer {
     margin-right: auto;
     margin-left: auto;
 
+    &--p-y {
+        padding-top: 50px;
+        padding-bottom: 35px;
+    }
+
     @include r($sm-tablet) {
         max-width: 540px;
     }
 
     @include r($md-tablet) {
         max-width: 720px;
+
+        &--p-y {
+            padding-top: 100px;
+            padding-bottom: 85px;
+        }
     }
 
     @include r($lg-tablet) {
@@ -77,5 +87,11 @@ footer#layout-footer {
         &__headline {
             font-size: 2.25rem;
         }
+    }
+}
+
+.text {
+    &--center {
+        text-align: center;
     }
 }
