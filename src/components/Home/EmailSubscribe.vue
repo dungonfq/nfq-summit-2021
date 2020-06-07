@@ -19,7 +19,8 @@
                     <input type="email" class="email-subscribe__input" placeholder="Enter Your Email Address..."
                         v-model="email" name="email"/>
                     <span v-if="isEmpty" class="text--error">Your email cannot be empty</span>
-                    <span v-if="isError" class="text--error">Your email is invalid</span>
+                    <span v-if="isInvalid" class="text--error">Your email is invalid</span>
+                    <span v-if="isError" class="text--error">Something wrong! Please try again</span>
                     <span v-if="isSuccess" class="text--success">Subscribed email successfully!</span>
                 </div>
                 <button :class="['email-subscribe__btn', isShowNoti && 'showing-noti']" :disabled="isLoading" @click="submit">Subscribe</button>
@@ -31,18 +32,20 @@
 </template>
 
 <script>
+import { GS_APP_URL } from '@/data/gs';
 export default {
     data: () => ({
         email: '',
         emailPattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/, //[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$
-        isError: false,
+        isInvalid: false,
         isEmpty: false,
         isSuccess: false,
+        isError: false,
         isLoading: false,
     }),
     computed: {
         isShowNoti() {
-            return window.innerWidth <= 768 && (this.isError || this.isEmpty || this.isSuccess);
+            return window.innerWidth <= 768 && (this.isInvalid || this.isEmpty || this.isSuccess || this.isError);
         }
     },
     methods: {
@@ -55,20 +58,29 @@ export default {
                 this.isEmpty = true;
                 this.isLoading = false;
             } else if(!this.emailPattern.test(this.email)) {
-                this.isError = true;
+                this.isInvalid = true;
                 this.isLoading = false;
             } else {
-                this.isSuccess = true;
-                this.isLoading = false;
-                setTimeout(() => {
-                    this.reset();
-                }, 5000)
+                let formData = new FormData();
+                formData.append('email', this.email);
+
+                fetch(GS_APP_URL, { method: 'POST',body: formData})
+                    .then(response => {
+                        this.isSuccess = true;                            
+                    }).catch(error => {
+                        this.isError = true;
+                    }).finally (() => {
+                        this.isLoading = false;
+                        setTimeout(() => {
+                            this.reset();
+                        }, 5000)
+                    })
             }
         },
         reset() {
-            this.isLoading = false;
-            this.isError = false;
+            this.isInvalid = false;
             this.isEmpty = false;
+            this.isError = false;
             this.isSuccess = false;
         }
     }
