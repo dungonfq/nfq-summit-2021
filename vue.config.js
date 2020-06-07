@@ -1,4 +1,4 @@
 module.exports = {
   lintOnSave: false,
-  publicPath: '/nfq-summit-2021/'
+  publicPath: process.env.NODE_ENV === 'production' ? '/nfq-summit-2021/' : '/'
 };

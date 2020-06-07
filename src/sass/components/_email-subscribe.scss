@@ -21,19 +21,20 @@
 
     &__form {
         position: relative;
+        width: 100%;
 
         .text--error,
         .text--success {
-            left: 10px;
+            left: 0;
             bottom: -75px;
-            width: calc(100% - 20px);
+            width: 100%;
         }
     }
 
     &__icon-email {
         position: absolute;
         top: 21px;
-        left: 20px;
+        left: 15px;
     }
 
     &__icon-loading {
@@ -45,8 +46,8 @@
 
     &__input {
         padding: 20px 45px;
-        margin: 0 10px;
-        width: 400px;
+        margin: auto;
+        width: 100%;
         font-size: 18px;
         border: 1px solid $color-grey-ee;
         border-radius: 5px;
@@ -90,6 +91,27 @@
         position: absolute;
         left: 0;
         bottom: -3px;
+    }
+
+    @include r($lg-mobile) {
+        &__form {
+            width: auto;
+
+            .text--error,
+            .text--success {
+                width: calc(100% - 20px);
+                left: 10px;
+            }
+        }
+        
+        &__input {
+            margin: 0 10px;
+            width: 400px;
+        }
+        
+        &__icon-email {
+            left: 22px;
+        }
     }
 
     @include r($md-tablet) {
