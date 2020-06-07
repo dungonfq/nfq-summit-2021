@@ -48,6 +48,7 @@
           :class="['email-subscribe__btn', isShowNoti && 'showing-noti']"
           :disabled="isLoading"
           @click="submit"
+          @keyup.enter="submit"
         >
           Subscribe
         </button>
