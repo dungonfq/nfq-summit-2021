@@ -1,3 +1,4 @@
 module.exports = {
-  lintOnSave: false
+  lintOnSave: false,
+  publicPath: '/nfq-summit-2021/'
 };
