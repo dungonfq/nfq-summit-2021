@@ -17,12 +17,12 @@
         <div class="email-subscribe__form">
           <img
             class="email-subscribe__icon-email"
-            src="/images/icons/icon-email.svg"
+            src="images/icons/icon-email.svg"
           />
           <img
             v-if="isLoading"
             class="email-subscribe__icon-loading"
-            src="/images/icons/icon-loading.svg"
+            src="images/icons/icon-loading.svg"
           />
           <input
             type="email"
@@ -56,7 +56,7 @@
 
     <img
       class="email-subscribe__illustration"
-      src="/images/illustration/bridge.svg"
+      src="images/illustration/bridge.svg"
     />
   </div>
 </template>
