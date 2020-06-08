@@ -5,10 +5,14 @@ body {
 }
 
 footer#layout-footer {
-    min-height: 190px;
+    min-height: 100px;
     line-height: 29px;
     padding-top: 35px;
     background: $color-white;
+
+    @include r($md-tablet) {
+        min-height: 180px;
+    }
 }
 
 *, *::before, *::after {
