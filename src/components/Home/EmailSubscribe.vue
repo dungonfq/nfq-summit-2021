@@ -57,7 +57,7 @@
 
     <img
       class="email-subscribe__illustration"
-      src="images/illustration/bridge.svg"
+      src="images/illustration/bridge.png"
     />
   </div>
 </template>
