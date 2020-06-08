@@ -22,10 +22,10 @@
     &__headline,
     &__desc {
         color: $color-white;
-        -webkit-text-stroke-width: 0.5px;
         -webkit-text-stroke-color: $color-black;
         text-align: center;
         font-weight: bold;
+        -webkit-text-stroke-width: 1px;
     }
 
     &__headline {
@@ -36,8 +36,8 @@
     }
 
     &__desc {
-        font-size: 18px;
-        margin-top: 15px;
+        font-size: 22px;
+        margin-top: 10px;
         font-family: $font-family-extra-black;
     }
 
@@ -50,11 +50,13 @@
     @include r($md-tablet) {
         &__headline {
             font-size: 55px;
+            -webkit-text-stroke-width: 2px;
         }
 
         &__desc {
             font-size: 30px;
             margin-top: 50px;
+            -webkit-text-stroke-width: 2px;
         }
     }
 }
