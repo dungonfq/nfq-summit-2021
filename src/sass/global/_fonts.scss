@@ -1,31 +1,31 @@
 @font-face {
     font-family: 'PDFinTextPro-Bold';
-    src:  url('#{$aws_url}fonts/PFDinTextPro-Bold.ttf') format("truetype");
+    src:  url('#{$aws_url_prod}fonts/PFDinTextPro-Bold.ttf') format("truetype");
 }
 
 @font-face {
     font-family: 'PDFinTextPro-ExtraBlack';
-    src:  url('#{$aws_url}fonts/PFDinTextPro-ExtraBlack.ttf') format("truetype");
+    src:  url('#{$aws_url_prod}fonts/PFDinTextPro-ExtraBlack.ttf') format("truetype");
 }
 
 @font-face {
     font-family: 'PDFinTextPro-Light';
-    src:  url('#{$aws_url}fonts/PFDinTextPro-Light.ttf') format("truetype");
+    src:  url('#{$aws_url_prod}fonts/PFDinTextPro-Light.ttf') format("truetype");
 }
 
 @font-face {
     font-family: 'PDFinTextPro-LightItalic';
-    src:  url('#{$aws_url}fonts/PFDinTextPro-LightItalic.ttf') format("truetype");
+    src:  url('#{$aws_url_prod}fonts/PFDinTextPro-LightItalic.ttf') format("truetype");
 }
 
 @font-face {
     font-family: 'PDFinTextPro-Medium';
-    src:  url('#{$aws_url}fonts/PFDinTextPro-Medium.ttf') format("truetype");
+    src:  url('#{$aws_url_prod}fonts/PFDinTextPro-Medium.ttf') format("truetype");
 }
 
 @font-face {
     font-family: 'PDFinTextPro-Regular';
-    src:  url('#{$aws_url}fonts/PFDinTextPro-Regular.ttf') format("truetype");
+    src:  url('#{$aws_url_prod}fonts/PFDinTextPro-Regular.ttf') format("truetype");
 }
 
 // @font-face {
