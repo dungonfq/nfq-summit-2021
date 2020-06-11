@@ -56,9 +56,16 @@
     </div>
 
     <div class="bg-illustration container">
-      <img
-        class="email-subscribe__illustration"
-        src="images/illustration/bridge.png" />
+      <picture>
+        <source
+          srcset="images/illustration/bridge.svg"
+          media="(min-width: 480px)"
+        />
+        <img
+          class="email-subscribe__illustration"
+          src="images/illustration/bridge.png"
+        />
+      </picture>
     </div>
   </div>
 </template>
