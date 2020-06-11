@@ -69,4 +69,10 @@
             padding: 50px 100px;
         }
     }
+
+    @include r($md-desktop) {
+        .testimonial__slide {
+            padding: 50px 150px;
+        }
+    }
 }
