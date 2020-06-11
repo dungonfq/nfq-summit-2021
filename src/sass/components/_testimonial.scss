@@ -39,7 +39,7 @@
         padding: 50px;
         background-color: $color-white;
         text-align: center;
-        font-size: 18px;
+        font-size: 1rem;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -48,7 +48,7 @@
         &-content {
             margin-bottom: 20px;
             font-family: $font-family-light-italic;
-            font-size: 20px;
+            font-size: 1.25rem;
         }
 
         &-credit {
@@ -67,10 +67,6 @@
 
         .testimonial__slide {
             padding: 50px 100px;
-
-            &-content {
-                font-size: 30px;
-            }
         }
     }
 }

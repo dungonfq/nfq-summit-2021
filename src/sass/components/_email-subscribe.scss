@@ -33,7 +33,7 @@
 
     &__icon-email {
         position: absolute;
-        top: 21px;
+        top: 16px;
         left: 15px;
     }
 
@@ -45,7 +45,7 @@
     }
 
     &__input {
-        padding: 20px 45px;
+        padding: 15px 45px;
         margin: auto;
         width: 100%;
         font-size: 18px;
@@ -60,13 +60,14 @@
         box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.24), 0px 0px 8px rgba(0, 0, 0, 0.12);
         border-radius: 5px;
         color: $color-white;
-        padding: 20px 30px;
+        padding: 18px 35px;
         text-transform: uppercase;
         font-family: $font-family-medium;
         font-weight: bold;
         border: 0;
         letter-spacing: 1px;
-        font-size: 20px;
+        line-height: 1;
+        font-size: 1rem;
         margin-left: 0;
         margin-top: 20px;
         cursor: pointer;
