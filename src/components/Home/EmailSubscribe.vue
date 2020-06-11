@@ -55,10 +55,11 @@
       </div>
     </div>
 
-    <img
-      class="email-subscribe__illustration"
-      src="images/illustration/bridge.png"
-    />
+    <div class="bg-illustration container">
+      <img
+        class="email-subscribe__illustration"
+        src="images/illustration/bridge.svg" />
+    </div>
   </div>
 </template>
 
