@@ -36,14 +36,14 @@
     }
 
     .testimonial__slide {
-        padding: 50px;
+        padding: 20px 50px;
         background-color: $color-white;
         text-align: center;
         font-size: 1rem;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        justify-content: space-around;
+        justify-content: center;
 
         &-content {
             margin-bottom: 20px;
@@ -52,8 +52,12 @@
         }
 
         &-credit {
-            span {
+            span:first-child {
                 color: $color-orange;
+            }
+            a {
+                color: initial !important;
+                cursor: pointer;
             }
         }
     }
@@ -66,13 +70,13 @@
         }
 
         .testimonial__slide {
-            padding: 50px 100px;
+            padding: 30px 100px;
         }
     }
 
     @include r($md-desktop) {
         .testimonial__slide {
-            padding: 50px 150px;
+            padding: 30px 150px;
         }
     }
 }

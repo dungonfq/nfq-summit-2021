@@ -30,11 +30,9 @@
             v-for="(slide, id) in slidesData"
             :key="`slide_${id}`"
           >
-            <div class="testimonial__slide-content">
-              {{ slide.content }}
-            </div>
+            <div class="testimonial__slide-content" v-html="slide.content"></div>
             <div class="testimonial__slide-credit">
-              <span>{{ slide.author }}</span> - {{ slide.from }}
+              <span>{{ slide.author }}</span> - <span v-html="slide.from"></span>
             </div>
           </slide>
         </carousel>
