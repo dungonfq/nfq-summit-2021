@@ -20,7 +20,7 @@ const slidesData = [
   {
     content: `Best Event ever visited for many years. Thank you very much for this perfect Summit. So many cool people. So many different Topics. So many cool locations i would never have visited on my own.<br/>This is the perfect start for a new succesful year!`,
     author: "Dennis Heidtmann",
-    from: `<a href="https://www.koffer-direkt.de/" target="_blank">koffer-direkt.de</a> GmbH & Co. KG`
+    from: `koffer-direkt.de GmbH & Co. KG`
   },
   {
     content: `The Summit was extremly worthy, I did make more useful contacts and grabbed more knowledge than I would in other, compareable, events (there is actually nothing that will be compareable).<br/>A BIG thank you to .NFQ Asia for make this happen, I am already looking forward to the next Summit of .NFQ Asia.`,
